@@ -13,12 +13,8 @@ bool Chatarunga::jugar(){
 	cin >> x;
 	cout<<"y: ";
 	cin >> y;
-	/*for(int i=0;i<size;i++){
-		for(int j=0;j<size;j++){
-			cout<<"res "<<(tablero[i][j]==NULL)<<endl;
-		}
-	}*/
-	cout<<"res "<<tablero[0][2]->validarPiezas(x,y)<<endl;
+	
+	cout<<"res "<<tablero[0][1]->validarPiezas(x,y)<<endl;
 	}
 }
 

@@ -28,7 +28,6 @@ bool Elefante::validarPiezas(int x, int y){
 		}
 		
 	}else{
-		cout<<"no entra \n";
 		return false;
 	}
 }
