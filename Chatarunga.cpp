@@ -13,7 +13,12 @@ bool Chatarunga::jugar(){
 	cin >> x;
 	cout<<"y: ";
 	cin >> y;
-	cout<<"res "<<tablero[0][3]->validarPiezas(x,y)<<endl;
+	/*for(int i=0;i<size;i++){
+		for(int j=0;j<size;j++){
+			cout<<"res "<<(tablero[i][j]==NULL)<<endl;
+		}
+	}*/
+	cout<<"res "<<tablero[0][2]->validarPiezas(x,y)<<endl;
 	}
 }
 
@@ -75,7 +80,7 @@ void Chatarunga::crearTablero(){
 					}
 				}
 			}else{
-				tablero[i][j] = new Raja(i, j, tablero,'.');
+				tablero[i][j] = NULL;
 			}
 		   	
 		}
@@ -88,10 +93,13 @@ void Chatarunga::printTablero(){
 		cout<<i<<" ";
 		for(int j=0;j<size;j++){
 			//cout<<"j "<<j<<endl;
-			
-			cout<<"[";
-			cout<<tablero[i][j]->getChar();
-			cout<<"]";
+			if(tablero[i][j] == NULL){
+				cout<<"[.]";
+			}else{
+				cout<<"[";
+				cout<<tablero[i][j]->getChar();
+				cout<<"]";
+			}
 		}
 		cout<<endl;
 	}

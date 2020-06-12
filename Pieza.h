@@ -1,6 +1,6 @@
 #ifndef PIEZA_H
 #define PIEZA_H
-
+#include<iostream>
 class Pieza
 {
 	public:
