@@ -14,7 +14,7 @@ bool Chatarunga::jugar(){
 	cout<<"y: ";
 	cin >> y;
 	
-	cout<<"res "<<tablero[0][1]->validarPiezas(x,y)<<endl;
+	cout<<"res "<<tablero[6][0]->validarPiezas(x,y)<<endl;
 	}
 }
 
