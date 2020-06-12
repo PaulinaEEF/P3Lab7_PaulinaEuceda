@@ -12,7 +12,9 @@ int main(int argc, char** argv) {
 	Chatarunga* cha = new Chatarunga();
 	cha->crearTablero();
 	cha->printTablero();
+	cha->jugar();
 //	Infanteria* infan = new Infanteria(x, y, z);
 //	Torre* torre = new Torre(x, y, z);
+	delete cha;
 	return 0;
 }

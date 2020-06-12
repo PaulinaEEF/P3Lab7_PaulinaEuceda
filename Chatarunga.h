@@ -11,6 +11,7 @@
 
 using std::cout;
 using std::endl;
+using std::cin;
 
 class Chatarunga
 {
@@ -18,6 +19,7 @@ class Chatarunga
 		Chatarunga();
 		void crearTablero();
 		void printTablero();
+		bool jugar();
 		~Chatarunga();
 	protected:
 		int size;

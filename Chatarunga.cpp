@@ -5,6 +5,18 @@ Chatarunga::Chatarunga()
 	this->size=8;
 }
 
+bool Chatarunga::jugar(){
+	while(true){
+		
+	int x,y;
+	cout<<"x: ";
+	cin >> x;
+	cout<<"y: ";
+	cin >> y;
+	cout<<"res "<<tablero[0][3]->validarPiezas(x,y)<<endl;
+	}
+}
+
 void Chatarunga::crearTablero(){
 	
 	tablero = new Pieza**[size];
@@ -87,4 +99,14 @@ void Chatarunga::printTablero(){
 
 Chatarunga::~Chatarunga()
 {
+	for(int i=0;i<size;i++)
+		for(int j=0;j<size;j++){
+			delete tablero[i][j];
+		}
+		
+	for(int i = 0;i<size;i++){
+		delete[] tablero[i];
+	}
+	
+	delete[] tablero;
 }

@@ -6,6 +6,7 @@ Caballo::Caballo(int fila, int columna, Pieza*** tablero, char caracter):Pieza(f
 }
 
 bool Caballo::validarPiezas(int x, int y){
+	
 	return false;
 }
 

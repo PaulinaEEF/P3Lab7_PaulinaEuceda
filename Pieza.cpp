@@ -8,7 +8,7 @@ Pieza::Pieza(int fila, int columna, Pieza*** tablero)
 	
 }
 
-bool Pieza::movimiento(int, int){
+bool Pieza::movimiento(int fila, int col){
 	
 }
 
