@@ -6,15 +6,73 @@ Chatarunga::Chatarunga()
 }
 
 bool Chatarunga::jugar(){
+	int turnos=0;
+	int x,y, fil, col;
+	int salida=1;
+	string coor;
 	while(true){
+		cout<<"\n1) Seguir Jugando \nCualquier otro numero) Parar \nElija la opcion que desea: ";
+		cin>>salida;
+		cout<<endl;
+		if(salida==1){
+			if(turnos%2==0){
+				cout<<"---Jugador de piezas blancas---"<<endl;
+			}else{
+				cout<<"---Jugador de piezas negras---"<<endl;
+			}
+			
+			
+			cout<<"Elija la coordenada en [letra][numero]-[letra][numero]: ";
+			cin>>coor;
+			x = coor[4] -48;
+			y = coor[1] -65;
+			fil = coor[11] -48;
+			col = coor[8] -65;
+			
+			
+			while(x<0 || x>7 || y<0 || y>7){
+				cout<<"No se puede, fuera de los limites el que quiere mover. \nElija la coordenada en x de la pieza que desee mover: ";
+				cin>>x;
+				cout<<"Elija la coordenada en y de la pieza que desee mover: ";
+				cin>>y;
+			}
+			while(tablero[x][y]==NULL){
+				cout<<"No se puede, no hay nada. \nElija la coordenada en x de la pieza que desee mover: ";
+				cin>>x;
+				cout<<"Elija la coordenada en y de la pieza que desee mover: ";
+				cin>>y;
+			}
+			
+			
+			
+			while(fil<0 || fil>7 || col<0 || col>7){
+				cout<<"No se puede, fuera de los limites donde quiere mover. \nElija la coordenada en x de donde quiere mover: ";
+				cin>>fil;
+				cout<<"Elija la coordenada en y de donde quiere mover: ";
+				cin>>col;
+			}
+			
+			
+			if(tablero[x][y]->movimiento(fil, col)){
+				printTablero();
+				turnos++;
+			}else{
+				cout<<"\nUps. Algo fue mal. Intente de nuevo.\n";
+			}
+		}
 		
-	int x,y;
-	cout<<"x: ";
-	cin >> x;
-	cout<<"y: ";
-	cin >> y;
+		
+		else{
+			cout<<"Sayonara"<<endl;
+			break;
+		}
 	
-	cout<<"res "<<tablero[6][0]->validarPiezas(x,y)<<endl;
+//	cout<<"x: ";
+//	cin >> x;
+//	cout<<"y: ";
+//	cin >> y;
+//	
+//	cout<<"res "<<tablero[6][0]->validarPiezas(x,y)<<endl;
 	}
 }
 

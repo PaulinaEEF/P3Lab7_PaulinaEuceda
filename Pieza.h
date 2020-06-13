@@ -1,6 +1,7 @@
 #ifndef PIEZA_H
 #define PIEZA_H
 #include<iostream>
+using std::cout;
 class Pieza
 {
 	public:

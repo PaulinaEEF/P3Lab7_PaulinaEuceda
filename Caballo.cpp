@@ -37,7 +37,7 @@ bool Caballo::validarPiezas(int x, int y){
 		}
 		
 	}else{
-		return false;
+		return true;
 	}
 }
 
