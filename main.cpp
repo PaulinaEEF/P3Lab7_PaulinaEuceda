@@ -5,16 +5,13 @@
 #include"Chatarunga.h"
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-
+using std::cout;
 int main(int argc, char** argv) {
-	int x, y;
-	char z;
+	cout<<"Buenas, espero que disfrute el juego porque el programador no disfrutó programarlo :)\n";
 	Chatarunga* cha = new Chatarunga();
 	cha->crearTablero();
 	cha->printTablero();
 	cha->jugar();
-//	Infanteria* infan = new Infanteria(x, y, z);
-//	Torre* torre = new Torre(x, y, z);
 	delete cha;
 	return 0;
 }

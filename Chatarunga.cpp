@@ -24,32 +24,38 @@ bool Chatarunga::jugar(){
 			
 			cout<<"Elija la coordenada en [letra][numero]-[letra][numero]: ";
 			cin>>coor;
-			x = coor[4] -48;
-			y = coor[1] -65;
-			fil = coor[11] -48;
-			col = coor[8] -65;
+			x = coor[1] -48;
+			y = coor[0] -65;
+			fil = coor[4] -48;
+			col = coor[3] -65;
 			
 			
 			while(x<0 || x>7 || y<0 || y>7){
-				cout<<"No se puede, fuera de los limites el que quiere mover. \nElija la coordenada en x de la pieza que desee mover: ";
-				cin>>x;
-				cout<<"Elija la coordenada en y de la pieza que desee mover: ";
-				cin>>y;
+				cout<<"No se puede, fuera de los limites el que quiere mover. \nElija la coordenada en [letra][numero]-[letra][numero]: ";
+				cin>>coor;
+				x = coor[1] -48;
+				y = coor[0] -65;
+				fil = coor[4] -48;
+				col = coor[3] -65;
 			}
 			while(tablero[x][y]==NULL){
-				cout<<"No se puede, no hay nada. \nElija la coordenada en x de la pieza que desee mover: ";
-				cin>>x;
-				cout<<"Elija la coordenada en y de la pieza que desee mover: ";
-				cin>>y;
+				cout<<"No se puede, no hay nada. \nElija la coordenada en [letra][numero]-[letra][numero]: ";
+				cin>>coor;
+				x = coor[1] -48;
+				y = coor[0] -65;
+				fil = coor[4] -48;
+				col = coor[3] -65;
 			}
 			
 			
 			
 			while(fil<0 || fil>7 || col<0 || col>7){
-				cout<<"No se puede, fuera de los limites donde quiere mover. \nElija la coordenada en x de donde quiere mover: ";
-				cin>>fil;
-				cout<<"Elija la coordenada en y de donde quiere mover: ";
-				cin>>col;
+				cout<<"No se puede, fuera de los limites donde quiere mover. \nElija la coordenada en [letra][numero]-[letra][numero]: ";
+				cin>>coor;
+				x = coor[1] -48;
+				y = coor[0] -65;
+				fil = coor[4] -48;
+				col = coor[3] -65;
 			}
 			
 			
